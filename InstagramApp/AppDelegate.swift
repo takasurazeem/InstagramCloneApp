@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        UINavigationBar.appearance().isTranslucent = false
+//        UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = .white
         
         window?.rootViewController = tabController
