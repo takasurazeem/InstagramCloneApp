@@ -50,11 +50,34 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
+        posts.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
+            
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as! FeedTableViewCell
+        
+        let currentIndex = indexPath.row - 1
+        
+        let post = posts[currentIndex]
+        
+        cell.profileImage.image = post.user.profileImage
+        
+        cell.postImage.image = post.postImage
+        
+        cell.dateLabel.text = post.datePosted
+        
+        cell.likesCountLabel.text = "\(post.likesCount) likes"
+        
+        cell.usernameTitleButton.setTitle(post.user.name, for: .normal)
+        
+        cell.commentCountButton.setTitle("View all \(post.commentCount) comments", for: .normal)
         
         return cell
     }
