@@ -39,6 +39,10 @@ class HomeViewController: UIViewController {
         leftBarItemImage = leftBarItemImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: nil, action: nil)
+        
+        let profileImageView = UIImageView(image: UIImage(named: "logo_nav_icon"))
+        
+        self.navigationItem.titleView = profileImageView
     }
     
 }
