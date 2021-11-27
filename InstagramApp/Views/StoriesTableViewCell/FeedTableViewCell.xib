@@ -163,7 +163,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="commentCountButton" destination="rlr-hd-hZp" id="F3p-qi-uNN"/>
-                <outlet property="dateLabel" destination="H2p-sc-9uM" id="QSp-5d-Yuv"/>
+                <outlet property="dateLabel" destination="NRv-PD-OU6" id="Rh6-3W-CpW"/>
                 <outlet property="likesCountLabel" destination="bTu-v7-thg" id="OXo-N9-N9N"/>
                 <outlet property="postCommentLabel" destination="4J4-R3-DKl" id="nxp-GD-V6b"/>
                 <outlet property="postImage" destination="UQ9-Lu-ohk" id="5l4-P7-v51"/>
