@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,13 +13,13 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="StoriesTableViewCell" customModule="InstagramApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="479" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="479" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="c5G-jV-y0p">
                         <rect key="frame" x="0.0" y="0.0" width="479" height="125"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92148786780000003" green="0.92162030939999995" blue="0.92145889999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="125" id="aaD-O1-FiY"/>
                         </constraints>
@@ -33,6 +32,7 @@
                     </collectionView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="c5G-jV-y0p" secondAttribute="bottom" id="3UR-Sm-kwH"/>
                     <constraint firstItem="c5G-jV-y0p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FhK-3O-qcj"/>
                     <constraint firstItem="c5G-jV-y0p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="scV-g4-jvM"/>
                     <constraint firstAttribute="trailing" secondItem="c5G-jV-y0p" secondAttribute="trailing" id="zCA-40-cGi"/>
@@ -45,9 +45,4 @@
             <point key="canvasLocation" x="247.10144927536234" y="172.09821428571428"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
