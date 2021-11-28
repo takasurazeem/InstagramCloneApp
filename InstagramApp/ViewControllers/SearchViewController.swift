@@ -14,6 +14,11 @@ class SearchViewController: UIViewController {
 
     var searchController: UISearchController!
 
+    lazy var posts: [Post] = {
+        let model = Model()
+        return model.postList
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,11 +48,15 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        posts.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreCollectionViewCell", for: indexPath) as! ExploreCollectionViewCell
+
+        cell.exploreImage.image = posts[indexPath.item].postImage
+
+        return cell
     }
 
 }
