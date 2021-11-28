@@ -1,0 +1,12 @@
+disabled_rules:
+- force_cast
+- line_length
+- identifier_name
+- function_parameter_count
+- file_length
+- function_body_length
+- type_body_length
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Carthage
+- Pods
+- ProjectNameTests

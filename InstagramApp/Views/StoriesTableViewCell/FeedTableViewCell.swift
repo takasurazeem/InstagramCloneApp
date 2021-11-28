@@ -17,12 +17,12 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var postCommentLabel: UILabel!
     @IBOutlet weak var commentCountButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         selectionStyle = .none
-        
+
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.layer.masksToBounds = true
     }
@@ -32,5 +32,5 @@ class FeedTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
