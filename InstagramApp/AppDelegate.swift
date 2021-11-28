@@ -10,11 +10,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let tabBarDelegate = TabBarDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         let tabController = UITabBarController()
+
+        tabController.delegate = tabBarDelegate
 
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
 

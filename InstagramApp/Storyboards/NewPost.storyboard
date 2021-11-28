@@ -31,6 +31,9 @@
                                                 <state key="normal" title="Library">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="libraryButtonDidTouch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qwJ-pX-owX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="o8P-6z-9hu">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="65"/>
@@ -40,6 +43,9 @@
                                                 <state key="normal" title="Photo">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="photoButtonDidTouch:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ock-oc-2jo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -80,7 +86,7 @@
         <!--New Post Page View Controller-->
         <scene sceneID="Bxd-SY-P8d">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="O4D-Wm-kgO" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="O4D-Wm-kgO" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpR-Bu-Mft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="922" y="94"/>
