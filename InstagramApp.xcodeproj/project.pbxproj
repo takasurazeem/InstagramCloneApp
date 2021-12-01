@@ -32,6 +32,10 @@
 		CD9400522753B85100A5C3B7 /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */; };
 		CD9400542754091F00A5C3B7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */; };
 		CDAC53122757997C00CB79CF /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */; };
+		CDAC53152757AAD600CB79CF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC53132757AAD600CB79CF /* ActivityTableViewCell.swift */; };
+		CDAC53162757AAD600CB79CF /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAC53142757AAD600CB79CF /* ActivityTableViewCell.xib */; };
+		CDAC53192757CBFA00CB79CF /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC53182757CBFA00CB79CF /* ActivityView.swift */; };
+		CDAC531B2757CC0600CB79CF /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAC531A2757CC0600CB79CF /* ActivityView.xib */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -69,6 +73,10 @@
 		CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
 		CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		CDAC53132757AAD600CB79CF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		CDAC53142757AAD600CB79CF /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		CDAC53182757CBFA00CB79CF /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		CDAC531A2757CC0600CB79CF /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 				CD9400482753907000A5C3B7 /* CollectionLayout.swift */,
 				CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */,
 				CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */,
+				CDAC53172757AADD00CB79CF /* Activity */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,6 +153,17 @@
 				CD9400412752406300A5C3B7 /* FeedTableViewCell.xib */,
 			);
 			path = StoriesTableViewCell;
+			sourceTree = "<group>";
+		};
+		CDAC53172757AADD00CB79CF /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC53132757AAD600CB79CF /* ActivityTableViewCell.swift */,
+				CDAC53142757AAD600CB79CF /* ActivityTableViewCell.xib */,
+				CDAC53182757CBFA00CB79CF /* ActivityView.swift */,
+				CDAC531A2757CC0600CB79CF /* ActivityView.xib */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		E147A0782159176200AD9178 = {
@@ -271,10 +291,12 @@
 				CD9400432752406300A5C3B7 /* FeedTableViewCell.xib in Resources */,
 				CD94002627514E9900A5C3B7 /* NewPost.storyboard in Resources */,
 				CD94002227514E8400A5C3B7 /* Home.storyboard in Resources */,
+				CDAC531B2757CC0600CB79CF /* ActivityView.xib in Resources */,
 				E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */,
 				CD94003F27523BD100A5C3B7 /* StoryCollectionViewCell.xib in Resources */,
 				CD94002A27514EAA00A5C3B7 /* Activity.storyboard in Resources */,
 				CD94003A2752375200A5C3B7 /* StoriesTableViewCell.xib in Resources */,
+				CDAC53162757AAD600CB79CF /* ActivityTableViewCell.xib in Resources */,
 				CD94002427514E9000A5C3B7 /* Search.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
 			);
@@ -323,6 +345,7 @@
 				E1E440B22163ED050034FD40 /* ActivityData.swift in Sources */,
 				CD9400502753B3D600A5C3B7 /* CameraViewController.swift in Sources */,
 				CD94004C2753B2B700A5C3B7 /* NewPostPageViewController.swift in Sources */,
+				CDAC53192757CBFA00CB79CF /* ActivityView.swift in Sources */,
 				CD94003327514F0D00A5C3B7 /* ProfileViewController.swift in Sources */,
 				CD94003527514F1700A5C3B7 /* ActivityViewController.swift in Sources */,
 				E147A0852159176200AD9178 /* AppDelegate.swift in Sources */,
@@ -330,6 +353,7 @@
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
 				CD9400392752375200A5C3B7 /* StoriesTableViewCell.swift in Sources */,
 				CD94003E27523BD100A5C3B7 /* StoryCollectionViewCell.swift in Sources */,
+				CDAC53152757AAD600CB79CF /* ActivityTableViewCell.swift in Sources */,
 				CD94003127514F0700A5C3B7 /* NewPostViewController.swift in Sources */,
 				CDAC53122757997C00CB79CF /* CustomSegmentedControl.swift in Sources */,
 			);
