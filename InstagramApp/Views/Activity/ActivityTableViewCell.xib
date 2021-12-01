@@ -24,7 +24,7 @@
                             <constraint firstAttribute="height" constant="60" id="Ado-tY-xrO"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-JG-gRP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-JG-gRP">
                         <rect key="frame" x="85" y="10" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
@@ -33,7 +33,6 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="KpU-JG-gRP" firstAttribute="leading" secondItem="KDZ-2G-na3" secondAttribute="trailing" constant="15" id="6A1-bD-zFZ"/>
-                    <constraint firstAttribute="bottom" secondItem="KDZ-2G-na3" secondAttribute="bottom" constant="9" id="7Ul-G6-BAm"/>
                     <constraint firstItem="KDZ-2G-na3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DIv-lJ-v9P"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KpU-JG-gRP" secondAttribute="bottom" constant="10" id="Kgm-9H-uEI"/>
                     <constraint firstItem="KpU-JG-gRP" firstAttribute="top" secondItem="KDZ-2G-na3" secondAttribute="top" id="UB9-6o-K17"/>
