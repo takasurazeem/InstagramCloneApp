@@ -39,8 +39,8 @@ class CustomSegmentedControl: UIView {
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)
-            // TODO: - Implement later
-            //            button.addTarget(self, action: #selector(), for: .touchUpInside)
+            // add selector
+            button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
             buttons.append(button)
         }
         // set the title color for first and default selected button
@@ -55,6 +55,40 @@ class CustomSegmentedControl: UIView {
         selector.backgroundColor = selectorColour
         // add selector to subview
         addSubview(selector)
+
+        // Create stack view with buttons
+        let stackView = UIStackView(arrangedSubviews: buttons)
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 0
+
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(stackView)
+        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
 
+    @objc func buttonTapped(button: UIButton) {
+        for (buttonIndex, enumeratedButton) in buttons.enumerated() {
+            enumeratedButton.setTitleColor(textColour, for: .normal)
+            if enumeratedButton == button {
+                selectedSegmentIndex = buttonIndex
+                delegate?.scrollTo(index: selectedSegmentIndex)
+            }
+        }
+    }
+
+    func updateSegmentedControlSegs(index: Int) {
+        for button in buttons {
+            button.setTitleColor(textColour, for: .normal)
+        }
+        let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(index)
+        UIView.animate(withDuration: 0.3) {
+            self.selector.frame.origin.x = selectorStartPosition
+        }
+        buttons[index].setTitleColor(selectorTextColor, for: .normal)
+    }
 }
