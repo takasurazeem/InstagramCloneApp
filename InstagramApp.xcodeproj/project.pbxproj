@@ -31,6 +31,7 @@
 		CD9400502753B3D600A5C3B7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD94004F2753B3D600A5C3B7 /* CameraViewController.swift */; };
 		CD9400522753B85100A5C3B7 /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */; };
 		CD9400542754091F00A5C3B7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */; };
+		CDAC53122757997C00CB79CF /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -67,6 +68,7 @@
 		CD94004F2753B3D600A5C3B7 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
 		CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				CD940046275286A100A5C3B7 /* SearchBarContainerView.swift */,
 				CD9400482753907000A5C3B7 /* CollectionLayout.swift */,
 				CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */,
+				CDAC53112757997C00CB79CF /* CustomSegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				CD9400392752375200A5C3B7 /* StoriesTableViewCell.swift in Sources */,
 				CD94003E27523BD100A5C3B7 /* StoryCollectionViewCell.swift in Sources */,
 				CD94003127514F0700A5C3B7 /* NewPostViewController.swift in Sources */,
+				CDAC53122757997C00CB79CF /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
