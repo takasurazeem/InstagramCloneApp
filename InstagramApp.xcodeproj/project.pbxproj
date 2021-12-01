@@ -30,6 +30,7 @@
 		CD94004E2753B39600A5C3B7 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD94004D2753B39600A5C3B7 /* PhotoLibraryViewController.swift */; };
 		CD9400502753B3D600A5C3B7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD94004F2753B3D600A5C3B7 /* CameraViewController.swift */; };
 		CD9400522753B85100A5C3B7 /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */; };
+		CD9400542754091F00A5C3B7 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		CD94004D2753B39600A5C3B7 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		CD94004F2753B3D600A5C3B7 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
+		CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				CD94004427527CDE00A5C3B7 /* ExploreCollectionViewCell.swift */,
 				CD940046275286A100A5C3B7 /* SearchBarContainerView.swift */,
 				CD9400482753907000A5C3B7 /* CollectionLayout.swift */,
+				CD9400532754091F00A5C3B7 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -311,6 +314,7 @@
 				CD940047275286A100A5C3B7 /* SearchBarContainerView.swift in Sources */,
 				CD94002F27514EFD00A5C3B7 /* SearchViewController.swift in Sources */,
 				CD9400422752406300A5C3B7 /* FeedTableViewCell.swift in Sources */,
+				CD9400542754091F00A5C3B7 /* PhotoCollectionViewCell.swift in Sources */,
 				CD9400492753907000A5C3B7 /* CollectionLayout.swift in Sources */,
 				CD94002D27514EF600A5C3B7 /* HomeViewController.swift in Sources */,
 				E1E440B22163ED050034FD40 /* ActivityData.swift in Sources */,
@@ -464,14 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = E2D87XL9X7;
 				INFOPLIST_FILE = InstagramApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.InstagramApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takasur.InstagramApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -483,14 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = E2D87XL9X7;
 				INFOPLIST_FILE = InstagramApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.InstagramApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takasur.InstagramApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

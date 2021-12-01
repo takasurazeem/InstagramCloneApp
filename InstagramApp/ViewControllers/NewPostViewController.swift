@@ -23,11 +23,9 @@ enum NewPostPagesToShow: Int {
     static func pagesToShow() -> [NewPostPagesToShow] {
         return [.library, .camera]
     }
-
 }
 
 class NewPostViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,15 +38,14 @@ class NewPostViewController: UIViewController {
     }
 
     @objc func cancelButtonPressed() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func libraryButtonDidTouch(_ sender: UIButton) {
+    @IBAction func libraryButtonDidTouch(_: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name("newPage"), object: NewPostPagesToShow.library)
     }
 
-    @IBAction func photoButtonDidTouch(_ sender: UIButton) {
+    @IBAction func photoButtonDidTouch(_: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name("newPage"), object: NewPostPagesToShow.camera)
     }
-
 }

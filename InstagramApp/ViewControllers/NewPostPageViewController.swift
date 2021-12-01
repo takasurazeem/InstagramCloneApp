@@ -9,7 +9,6 @@
 import UIKit
 
 class NewPostPageViewController: UIPageViewController, UIPageViewControllerDelegate {
-
     var orderedViewControllers: [UIViewController] = []
     var currentIndex: Int = 0
     var pagesToShow = NewPostPagesToShow.pagesToShow()
@@ -28,7 +27,7 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
 
-        NotificationCenter.default.addObserver(self, selector: #selector(NewPostPageViewController.newPage(notification:)), name: NSNotification.Name.init(rawValue: "newPage"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewPostPageViewController.newPage(notification:)), name: NSNotification.Name(rawValue: "newPage"), object: nil)
     }
 
     private func newViewController(pageToShow: NewPostPagesToShow) -> UIViewController {
@@ -58,12 +57,12 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
 
     deinit {
         NotificationCenter.default.removeObserver(self)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.init(rawValue: "newPage"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "newPage"), object: nil)
     }
 }
 
 extension NewPostPageViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else {
@@ -72,7 +71,7 @@ extension NewPostPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
 
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else { return nil }
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllerCount: Int = orderedViewControllers.count
@@ -84,5 +83,4 @@ extension NewPostPageViewController: UIPageViewControllerDataSource {
         }
         return orderedViewControllers[nextIndex]
     }
-
 }

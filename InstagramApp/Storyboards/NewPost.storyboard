@@ -102,14 +102,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mh4-p6-kTx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jt3-HL-42e">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jt3-HL-42e">
                                     <size key="itemSize" width="132" height="138"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="a2T-6g-9Wl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="a2T-6g-9Wl" customClass="PhotoCollectionViewCell" customModule="InstagramApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="132" height="138"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="72h-XA-VuN">
@@ -128,6 +128,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="132" height="138"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="EpG-xA-buR" id="LmM-6L-9wx"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -141,6 +144,9 @@
                             <constraint firstItem="lPo-8K-PUP" firstAttribute="bottom" secondItem="Mh4-p6-kTx" secondAttribute="bottom" id="UZ5-9H-JdT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photosCollectionView" destination="Mh4-p6-kTx" id="SHr-g1-SlQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohU-LY-5aC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +168,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="camera_capture_icon"/>
+                                <connections>
+                                    <action selector="startCapture:" destination="g6L-Ro-afq" eventType="touchUpInside" id="cuI-Cq-Z0e"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keC-YG-Tgm" customClass="SimpleCameraView" customModule="InstagramApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="414"/>
@@ -181,6 +190,9 @@
                             <constraint firstItem="WXV-bZ-n4R" firstAttribute="trailing" secondItem="keC-YG-Tgm" secondAttribute="trailing" id="sKX-sI-j7e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="simpleCameraView" destination="keC-YG-Tgm" id="RmS-P4-OAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu6-4V-8W5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct Post {
-
     var postImage: UIImage
 
     var postComment: String
@@ -21,25 +20,20 @@ struct Post {
     var likesCount: Int
 
     var datePosted: String
-
 }
 
 struct Story {
-
     var post: Post
-
 }
 
 class Model {
-
-    var postList: [Post] = [Post]()
+    var postList = [Post]()
 
     // var users: [User] = [User]()
 
-    var storyList: [Story] = [Story]()
+    var storyList = [Story]()
 
     init() {
-
         let user1 = User(name: "John Carmack", profileImage: UIImage(named: "user1")!)
 
         // users.append(user1)
@@ -79,7 +73,5 @@ class Model {
         storyList.append(Story(post: post1))
 
         storyList.append(Story(post: post2))
-
     }
-
 }

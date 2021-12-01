@@ -9,8 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
 
     var searchController: UISearchController!
 
@@ -40,14 +39,11 @@ class SearchViewController: UIViewController {
         let searchBarContainer = SearchBarContainerView(customSearchBar: searchController.searchBar)
         searchBarContainer.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 44)
         navigationItem.titleView = searchBarContainer
-
     }
-
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         posts.count
     }
 
@@ -58,5 +54,4 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
         return cell
     }
-
 }

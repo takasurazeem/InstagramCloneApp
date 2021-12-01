@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 class TabBarDelegate: NSObject, UITabBarControllerDelegate {
-
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    func tabBarController(_: UITabBarController, didSelect viewController: UIViewController) {
         let navigationController = viewController as? UINavigationController
         _ = navigationController?.popViewController(animated: false)
     }

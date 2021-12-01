@@ -9,10 +9,9 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var storyImage: UIImageView!
 
-    @IBOutlet weak var storyImage: UIImageView!
-
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet var userNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +21,4 @@ class StoryCollectionViewCell: UICollectionViewCell {
         storyImage.layer.borderColor = UIColor.white.cgColor
         storyImage.layer.borderWidth = 2.0
     }
-
 }

@@ -9,14 +9,13 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var usernameTitleButton: UIButton!
-    @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var likesCountLabel: UILabel!
-    @IBOutlet weak var postCommentLabel: UILabel!
-    @IBOutlet weak var commentCountButton: UIButton!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var usernameTitleButton: UIButton!
+    @IBOutlet var postImage: UIImageView!
+    @IBOutlet var likesCountLabel: UILabel!
+    @IBOutlet var postCommentLabel: UILabel!
+    @IBOutlet var commentCountButton: UIButton!
+    @IBOutlet var dateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,5 +31,4 @@ class FeedTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

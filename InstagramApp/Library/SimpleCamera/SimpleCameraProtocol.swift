@@ -13,13 +13,10 @@ typealias PhotoCompletionHandler = (_ data: Data?, _ success: Bool) -> Void
 typealias VideoCompletionHandler = (_ url: URL?, _ sucess: Bool) -> Void
 
 enum SimpleCameraPosition: Int {
-
     case front, back
 
     func value() -> AVCaptureDevice.Position {
-
         switch self {
-
         case .front:
 
             return AVCaptureDevice.Position.front
@@ -27,40 +24,29 @@ enum SimpleCameraPosition: Int {
         case .back:
 
             return AVCaptureDevice.Position.back
-
         }
-
     }
-
 }
 
 enum SimpleCameraCaptureMode: Int {
-
     case photo = 1, video
 
     var description: String {
-
         switch self {
-
         case .photo:
             return "PHOTO"
 
         case .video:
             return "VIDEO"
-
         }
-
     }
 }
 
 enum SimpleCameraFlashMode: Int {
-
     case off = 0, on, auto, na
 
     var description: String {
-
         switch self {
-
         case .off:
             return "OFF"
 
@@ -73,20 +59,15 @@ enum SimpleCameraFlashMode: Int {
         case .na:
 
             return "N/A"
-
         }
     }
-
 }
 
 enum SimpleCameraTorchMode: Int {
-
     case off = 0, on, na
 
     var description: String {
-
         switch self {
-
         case .off:
             return "OFF"
 
@@ -95,14 +76,11 @@ enum SimpleCameraTorchMode: Int {
 
         case .na:
             return "N/A"
-
         }
     }
-
 }
 
 protocol SimpleCameraProtocol {
-
     // var isCameraAuthorized: Bool { get }
 
     // func setupPreview() -> AVCaptureSession
@@ -130,5 +108,4 @@ protocol SimpleCameraProtocol {
     // func stopRecording()
 
     func getFlashSettingName(captureMode: SimpleCameraCaptureMode) -> String?
-
 }

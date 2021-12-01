@@ -9,7 +9,6 @@
 import UIKit
 
 class SearchBarContainerView: UIView {
-
     let searchBar: UISearchBar
 
     init(customSearchBar: UISearchBar) {
@@ -18,12 +17,13 @@ class SearchBarContainerView: UIView {
         addSubview(searchBar)
     }
 
-    convenience override init(frame: CGRect) {
+    override convenience init(frame: CGRect) {
         self.init(customSearchBar: UISearchBar())
         self.frame = frame
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -32,5 +32,4 @@ class SearchBarContainerView: UIView {
 
         searchBar.frame = bounds
     }
-
 }

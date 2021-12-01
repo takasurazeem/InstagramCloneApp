@@ -9,11 +9,9 @@
 import UIKit
 
 class StoriesTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
 
     lazy var stories: [Story] = {
-
         let model = Model()
 
         return model.storyList
@@ -29,17 +27,14 @@ class StoriesTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
 }
 
 extension StoriesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         stories.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! StoryCollectionViewCell
 
         cell.storyImage.image = stories[indexPath.row].post.postImage
@@ -48,10 +43,7 @@ extension StoriesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt _: IndexPath) -> CGSize {
         CGSize(width: 90, height: 110)
-
     }
-
 }
