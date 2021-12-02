@@ -9,6 +9,9 @@
 import UIKit
 import FirebaseAuth
 
+// FIXME: - Not sure if it is the right thing to do, will dig deeper later
+let tabBarDelegate = TabBarDelegate()
+
 class Helper {
 
     class func errorAlert(title: String, message: String) -> UIAlertController {
@@ -22,8 +25,6 @@ class Helper {
 
     class func login() {
         let tabController = UITabBarController()
-
-        let tabBarDelegate = TabBarDelegate()
 
         tabController.delegate = tabBarDelegate
 
@@ -108,9 +109,8 @@ class Helper {
 
             guard let window = appDelegate.window else { return }
             window.rootViewController = loginVC
-        } catch {
-            // FIXME: - Be descriptive here and not Microsoft.
-            //            let alert = Helper.errorAlert(title: "Error logging out.", message: "Something went wrong.")
+        } catch let error as NSError {
+            print(error)
         }
     }
 
