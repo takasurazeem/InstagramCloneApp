@@ -25,6 +25,7 @@
 		CD4412D92758C66800A9634E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4412D82758C66800A9634E /* SignupViewController.swift */; };
 		CD4412F42758C69E00A9634E /* ProfileViewStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4412F22758C69E00A9634E /* ProfileViewStyleTableViewCell.swift */; };
 		CD4412F52758C69E00A9634E /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4412F32758C69E00A9634E /* ProfileHeaderTableViewCell.swift */; };
+		CD5CE70C275E80DE001AA9A1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5CE70B275E80DE001AA9A1 /* Protocols.swift */; };
 		CD94002227514E8400A5C3B7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD94002127514E8400A5C3B7 /* Home.storyboard */; };
 		CD94002427514E9000A5C3B7 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD94002327514E9000A5C3B7 /* Search.storyboard */; };
 		CD94002627514E9900A5C3B7 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD94002527514E9900A5C3B7 /* NewPost.storyboard */; };
@@ -75,6 +76,7 @@
 		CD4412D82758C66800A9634E /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CD4412F22758C69E00A9634E /* ProfileViewStyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewStyleTableViewCell.swift; sourceTree = "<group>"; };
 		CD4412F32758C69E00A9634E /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		CD5CE70B275E80DE001AA9A1 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CD94002127514E8400A5C3B7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CD94002327514E9000A5C3B7 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CD94002527514E9900A5C3B7 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		E147A0832159176200AD9178 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
+				CD5CE70B275E80DE001AA9A1 /* Protocols.swift */,
 				CD4412C92758BEBF00A9634E /* Extensions */,
 				CD9400512753B85100A5C3B7 /* TabBarDelegate.swift */,
 				CD9400362752373B00A5C3B7 /* Views */,
@@ -408,6 +411,7 @@
 				CD9400492753907000A5C3B7 /* CollectionLayout.swift in Sources */,
 				CD4412F42758C69E00A9634E /* ProfileViewStyleTableViewCell.swift in Sources */,
 				CD4412D72758C56200A9634E /* ProfileViewController.swift in Sources */,
+				CD5CE70C275E80DE001AA9A1 /* Protocols.swift in Sources */,
 				CD94002D27514EF600A5C3B7 /* HomeViewController.swift in Sources */,
 				E1E440B22163ED050034FD40 /* ActivityData.swift in Sources */,
 				CD9400502753B3D600A5C3B7 /* CameraViewController.swift in Sources */,
