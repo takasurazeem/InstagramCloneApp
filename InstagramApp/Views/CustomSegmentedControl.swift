@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol ActivityDelegate: AnyObject {
-    func scrollTo(index: Int)
-}
-
 class CustomSegmentedControl: UIView {
     var buttons: [UIButton] = []
     var selector: UIView!

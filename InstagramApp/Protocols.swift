@@ -8,22 +8,15 @@
 
 import Foundation
 
-protocol FeedDataDelegate: class {
-    
+protocol FeedDataDelegate: AnyObject {
     func commentsDidTouch(post: Post)
-    
 }
 
-protocol ProfileDelegate: class {
-    
+protocol ProfileDelegate: AnyObject {
     func userNameDidTouch()
-    
 }
 
-protocol ActivityDelegate: class {
-    
+protocol ActivityDelegate: AnyObject {
     func scrollTo(index: Int)
-    
     func activityDidTouch()
-    
 }
