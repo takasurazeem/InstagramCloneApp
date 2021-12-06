@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignupViewController: UIViewController {
 
@@ -154,7 +156,51 @@ class SignupViewController: UIViewController {
     }
 
     @IBAction func signUpButtonDidTouch(_ sender: Any) {
-
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let username = usernameTextField.text else { return }
+        let spinner = UIViewController.displayLoading(withView: view)
+        // FIXME: - Put me behind some Presenter/Controller/ViewModel. This is crazy.
+        Auth.auth().createUser(withEmail: email, password: password) { /*[weak self]*/ user, error in
+            //            guard let self = self else { return }
+            // Check if there was an error creating the user account.
+            if let error = error {
+                // FIXME: - Sign up error list
+                print(error.localizedDescription)
+            } else {
+                // User created, now login, but do not go past if you cannot get the created
+                // userID after checking for error which is lame but this is how safe we are
+                // used to safe code things.
+                guard let userId = user?.user.uid else { return }
+                Auth.auth().signIn(withEmail: email, password: password) { _, error in
+                    UIViewController.removeFromLoading(spinner: spinner)
+                    // Check for any login related error.
+                    if let error = error {
+                        print(error.localizedDescription)
+                        // FIXME: This is done in login screen, abtract it and make use of DRY.
+                    } else {
+                        // Successful login, create user's document with set username during signup.
+                        // Since we do not own firebase so we cannot pass the set username during signup.
+                        let userRef = Firestore.firestore()
+                            .collection("users")
+                            .document(userId)
+                        userRef.setData(["username": username,
+                                         "bio": "welcome to my profile"], merge: true) { error in
+                            // Any error creating document?
+                            // Create a separate screen to force set username for user.
+                            // Bad UX but ¯\_(ツ)_/¯
+                            if let error = error {
+                                // FIXME: - Show an alert for me later.
+                                print(error.localizedDescription)
+                            }
+                        }
+                        DispatchQueue.main.async {
+                            Helper.login()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @IBAction func alreadyHaveAnAccountButtonDidTouch(_ sender: Any) {
