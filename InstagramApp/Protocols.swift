@@ -20,3 +20,7 @@ protocol ActivityDelegate: AnyObject {
     func scrollTo(index: Int)
     func activityDidTouch()
 }
+
+protocol ProfileHeaderDelegate: AnyObject {
+    func profileImageDidTouch()
+}

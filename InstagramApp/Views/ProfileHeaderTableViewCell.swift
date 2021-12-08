@@ -19,11 +19,18 @@ class ProfileHeaderTableViewCell: UITableViewCell {
 
     var profileType: ProfileType = .personal
 
+    weak var delegate: ProfileHeaderDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         profileButton.layer.borderWidth = CGFloat(0.5)
         profileButton.layer.borderColor = UIColor(red: 0.61, green: 0.61, blue: 0.61, alpha: 1.0).cgColor
         profileButton.layer.cornerRadius = CGFloat(3.0)
+
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageDidTouch))
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.clipsToBounds = true
+        profileImageView.addGestureRecognizer(tapRecognizer)
     }
 
     override func layoutSubviews() {
@@ -38,6 +45,10 @@ class ProfileHeaderTableViewCell: UITableViewCell {
             follow()
         }
 
+    }
+
+    @objc func profileImageDidTouch() {
+        delegate?.profileImageDidTouch()
     }
 
     func logout() {
