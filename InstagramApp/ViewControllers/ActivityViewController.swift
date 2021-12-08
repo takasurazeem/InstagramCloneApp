@@ -63,6 +63,9 @@ class ActivityViewController: UIViewController {
 }
 
 extension ActivityViewController: ActivityDelegate {
+    func activityDidTouch() {
+
+    }
 
     func scrollTo(index: Int) {
         if currentIndex == index {
